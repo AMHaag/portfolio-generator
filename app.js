@@ -1,15 +1,21 @@
+const fs =require('fs');
+const http = require('http')
+const generatePage = require('./src/page-template.js')
 const profileDataArgs = process.argv.slice(2);
+console.log(profileDataArgs);
 
-const printProfileData = profileDataArr => {
-  // This...
-  for (let i = 0; i < profileDataArr.length; i += 1) {
-    console.log(profileDataArr[i]);
-  }
+const [user,github] = profileDataArgs;
 
-  console.log('================');
+console.log(user);
+console.log(github);
 
-  // Is the same as this...
-  profileDataArr.forEach(profileItem => console.log(profileItem));
-};
 
-printProfileData(profileDataArgs);
+
+
+
+
+
+fs.writeFile('./index.html',generatePage(user,github), ohFuck=>{
+if(ohFuck) throw ohFuck;
+console.log('Filesaved!');
+});
