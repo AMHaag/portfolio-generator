@@ -1,9 +1,9 @@
-const fs = require('fs');
+const fs = require("fs");
 const profileDataArgs = process.argv.slice(2);
 const [user, github] = profileDataArgs;
 
-const generatePage=(userName,githubName)=> {
-     return `
+const generatePage = (userName, githubName) => {
+  return `
   <!DOCTYPE html> 
   <html lang="en"> 
   <head>
@@ -21,7 +21,6 @@ const generatePage=(userName,githubName)=> {
   </body>
   </html>
   `;
-}
+};
 
-module.exports = generatePage
-
+module.exports = generatePage;

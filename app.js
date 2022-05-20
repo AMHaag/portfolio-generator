@@ -1,5 +1,6 @@
 const fs =require('fs');
 const http = require('http')
+var inquirer = require('inquirer')
 const generatePage = require('./src/page-template.js')
 const profileDataArgs = process.argv.slice(2);
 console.log(profileDataArgs);
